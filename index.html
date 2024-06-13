@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yahia's Creative Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #f0f8ff;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background: #ff6347;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
         }
         .container {
             text-align: center;
@@ -21,6 +28,10 @@
             padding: 50px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1.5s ease-in-out;
         }
         .title {
             font-size: 2em;
@@ -39,23 +50,45 @@
             border-radius: 5px;
             font-size: 1em;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
         .button:hover {
             background-color: #ff4500;
+            transform: scale(1.05);
         }
         .hidden {
             display: none;
         }
+        .footer {
+            margin-top: auto;
+            padding: 20px;
+            background: #ff6347;
+            color: #fff;
+            width: 100%;
+            text-align: center;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Yahia's Creative Site</h1>
+    </header>
     <div class="container">
         <div class="title">Welcome to Yahia's Creative Site!</div>
-        <div class="question">teacher Loubna,Are you excited to see what Yahia did?</div>
+        <div class="question">Teacher Loubna, are you excited to see what Yahia did?</div>
         <button class="button" id="yesButton">YES</button>
         <a href="ticket-to-english_compress.pdf" id="downloadLink" class="hidden">Download the PDF</a>
     </div>
+    <footer class="footer">
+        <p>Connect with me on 
+            <a href="https://www.linkedin.com" target="_blank" style="color: #fff; text-decoration: underline;">LinkedIn</a> | 
+            <a href="https://www.twitter.com" target="_blank" style="color: #fff; text-decoration: underline;">Twitter</a>
+        </p>
+    </footer>
 
     <script>
         document.getElementById('yesButton').addEventListener('click', function() {
